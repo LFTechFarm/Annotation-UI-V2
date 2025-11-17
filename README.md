@@ -169,7 +169,7 @@ You can then transfer the detected shape or BBox into the **extra shapes** secti
 
 ---
 
-### 🌱 Available Color & Vegetation Indices  
+### 🌱 Available index & Vegetation Indices  
 These indices are computed from the RGB channels:
 
 #### **Base Excess / Difference Indices**
