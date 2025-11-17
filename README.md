@@ -156,7 +156,7 @@ Classical CV algorithms to automatically detect geometric shapes.
 ### Workflow:
 1. Select image index  
 2. Generate a **binary mask** using thresholding  
-3. Apply shape detection:
+3. Apply shape detection: (Tick MV preview)
    - ⚪ Circle  
    - 🔺 Triangle  
    - ⬛ Rectangle  
@@ -165,7 +165,7 @@ Classical CV algorithms to automatically detect geometric shapes.
    - ...  
 
 Ideal for datasets with structured or industrial shapes.
-
+You can then transfer the shape or bbox to the extra shapes. 
 ---
 
 # 4️⃣ Saving & Exporting 💾  
