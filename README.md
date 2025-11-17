@@ -15,7 +15,8 @@ Start Annotation-UI-V2 by:
 - Running the Python script  
 
 The interface will appear as shown:  
-*(insert screenshot)*
+<img width="1915" height="1052" alt="image" src="https://github.com/user-attachments/assets/b0d71930-9995-4583-9570-5b201b01b6df" />
+
 
 ---
 
@@ -27,8 +28,15 @@ dataset/
   ├── images/   ← your .jpg/.png files
   └── labels/   ← your YOLO .txt annotation files
 
+If you only have images, create an empty `labels/` folder.
 
+---
 
+## 1.3 Select Your Annotation Task  
+Using the tabs on the LEFT panel, choose the desired task:
+
+- **Bounding Box (Detection)**  
+- **Mask (Segmentation)**  
 
 If you only have images, create an empty `labels/` folder.
 
@@ -93,6 +101,7 @@ Active when **Mask** task is selected:
 | 🗑️ **Delete Mask** | Remove the mask |
 | 🔀 **Change Class** | Modify the object class |
 | ✨ **Validate** | Transfer predicted mask to GT |
+| ⚒️ **Modify shape** | Modify contour of the shape |
 
 ---
 
@@ -100,10 +109,22 @@ Active when **Mask** task is selected:
 
 ## 3.1 Dataset Description  
 Provides an overview of:
-- Current image index  
+
+### **Dataset Overview**
+- Total classes  
 - Total images  
-- Loaded classes  
-- Available label files  
+- Average boxes per image  
+- Total annotations  
+- Class balance  
+
+### **Current Image**
+- File name  
+- Number of annotations (GT / PRED / EXTRA)  
+- Date  
+
+### **Class Legend**
+By default the names are **class_{id}**.  
+You can load a YOLO YAML file to display real class names.
 
 Useful for monitoring progress and dataset integrity.
 
@@ -185,4 +206,3 @@ Feel free to reach out for improvements or new features.
 
 # 8️⃣ License 📄  
 Specify your license here (MIT, Apache, GPL, etc.)
-
