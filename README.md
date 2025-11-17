@@ -219,9 +219,9 @@ These indices are computed from the RGB channels:
 ---
 
 # 4️⃣ Saving & Exporting 💾  
+- **Once the annotation task is finished on an image don't forget to save the txt file**  
 - All annotations are saved in **YOLO format**  
 - Output `.txt` files are written directly in the `labels/` folder  
-- Compatible with YOLOv5–YOLOv9, RT-DETR, SAM pipelines, and others
 
 ---
 
