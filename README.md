@@ -25,10 +25,10 @@ Click **“Select Parent Folder”** (top-left).
 Your dataset must follow YOLO format:
 
 
-
 dataset/
-  ├── images/   ← your .jpg/.png files
-  └── labels/   ← your YOLO .txt annotation files
+├── images/   # your .jpg/.png files
+└── labels/   # your YOLO .txt annotation files
+
 
 If you only have images, create an empty `labels/` folder.
 
