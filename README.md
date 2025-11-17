@@ -151,12 +151,12 @@ Efficient for semi-automatic dataset annotation.
 ---
 
 ## 3.3 Machine Vision Tools 📷  
-Classical CV algorithms to automatically detect geometric shapes.
+Classical CV algorithms to automatically detect geometric shapes or generate color/vegetation indices.
 
 ### Workflow:
-1. Select image index (predefined or custom )
+1. Select image index (predefined or custom)
 2. Generate a **binary mask** using thresholding  
-3. Apply shape detection: (Tick MV preview)
+3. Apply shape detection (tick MV preview):
    - ⚪ Circle  
    - 🔺 Triangle  
    - ⬛ Rectangle  
@@ -164,8 +164,58 @@ Classical CV algorithms to automatically detect geometric shapes.
    - 📏 Circularity filter  
    - ...  
 
-Ideal for datasets with structured or industrial shapes.
-You can then transfer the shape or bbox to the extra shapes. 
+Ideal for datasets with structured or industrial shapes.  
+You can then transfer the detected shape or BBox into the **extra shapes** section.
+
+---
+
+### 🌱 Available Color & Vegetation Indices  
+These indices are computed from the RGB channels:
+
+#### **Base Excess / Difference Indices**
+- `ExG = 2G - R - B`  
+- `ExR = 1.4R - G`  
+- `ExB = 1.4B - G`  
+- `ExGR = G - R`  
+- `ExRB = R - B`  
+- `ExGB = G - B`  
+
+#### **Normalized Difference Indices**
+- `NDI_GR = (G - R) / (G + R)`  
+- `NDI_BR = (B - R) / (G + R)`  
+- `NDI_GB = (G - B) / (G + B)`  
+- `NRB = (R - B) / (R + B)`  
+- `NRGDI = (R - G) / (R + G)`  
+- `NRBDI = (R - B) / (R + G + B)`  
+- `NGRDI_mod = (G - R) / (G + R + B)`  
+- `NGBDI_mod = (G - B) / (G + B + R)`  
+
+#### **Channel Ratios**
+- `GR_Ratio = G / R`  
+- `GB_Ratio = G / B`  
+- `RG_Ratio = R / G`  
+- `RB_Ratio = R / B`  
+- `BG_Ratio = B / G`  
+- `BR_Ratio = B / R`  
+
+#### **Channel Fractions**
+- `G_Fraction = G / (R + G + B)`  
+- `R_Fraction = R / (R + G + B)`  
+- `B_Fraction = B / (R + G + B)`  
+
+#### **Additional Normalized Indices**
+- `NGI = G / (R + G + B)`  
+- `NRGI = (R + G) / (R + G + B)`  
+- `NRBI = (R + B) / (R + G + B)`  
+- `NEGI = (G - R - B) / (R + G + B)`  
+- `NERI = (R - G - B) / (R + G + B)`  
+- `NEBI = (B - G - R) / (R + G + B)`  
+
+#### **Vegetation-Focused Modified Indices**
+- `MGRVI = (G - R) / (G + R + 2B)`  
+- `MGBVI = (G - B) / (G + B + 2R)`  
+- `MRGVI = (R - G) / (R + G + 2B)`  
+
 ---
 
 # 4️⃣ Saving & Exporting 💾  
