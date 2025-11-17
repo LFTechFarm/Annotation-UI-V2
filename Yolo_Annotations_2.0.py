@@ -905,9 +905,9 @@ class YoloEditorApp(tk.Tk):
         tab_segment = ttk.Frame(mv_notebook)
         tab_shape = ttk.Frame(mv_notebook)
 
-        mv_notebook.add(tab_index, text="1️⃣ Index Computation")
-        mv_notebook.add(tab_segment, text="2️⃣ Segmentation")
-        mv_notebook.add(tab_shape, text="3️⃣ Shape Detection")
+        mv_notebook.add(tab_index, text="1. Index")
+        mv_notebook.add(tab_segment, text="2. Mask")
+        mv_notebook.add(tab_shape, text="3. Shape")
 
         # --- Delegate to dedicated functions ---
         self._build_mv_index_page(tab_index)
@@ -919,7 +919,7 @@ class YoloEditorApp(tk.Tk):
         import tkinter as tk
         from tkinter import ttk
 
-        ttk.Label(parent, text="Step 2️⃣ - Segmentation", font=("TkDefaultFont", 10, "bold")).pack(anchor="w", pady=(2, 4))
+        ttk.Label(parent, text="Step 2️⃣ - Mask", font=("TkDefaultFont", 10, "bold")).pack(anchor="w", pady=(2, 4))
 
         # Readability section for Segmentation tab
         try:
@@ -958,7 +958,7 @@ class YoloEditorApp(tk.Tk):
         import tkinter as tk
         from tkinter import ttk
 
-        ttk.Label(parent, text="Step 1️⃣ - Index Computation", font=("TkDefaultFont", 10, "bold")).pack(anchor="w", pady=(2, 4))
+        ttk.Label(parent, text="Step 1️⃣ - Index", font=("TkDefaultFont", 10, "bold")).pack(anchor="w", pady=(2, 4))
         try:
             self._build_mv_readability(parent)
         except Exception:
@@ -969,7 +969,7 @@ class YoloEditorApp(tk.Tk):
         import tkinter as tk
         from tkinter import ttk
 
-        ttk.Label(parent, text="Step 3️⃣ - Shape Detection", font=("TkDefaultFont", 10, "bold")).pack(anchor="w", pady=(2, 4))
+        ttk.Label(parent, text="Step 3️⃣ - Shape", font=("TkDefaultFont", 10, "bold")).pack(anchor="w", pady=(2, 4))
         try:
             self._build_mv_readability(parent)
         except Exception:
@@ -1593,6 +1593,7 @@ class YoloEditorApp(tk.Tk):
             self.show_mv_preview.set(False)
         if hasattr(self, "_render_image_on_canvas"):
             self._render_image_on_canvas()
+    
     def update_slider_range(self):
         n = max(1, len(self.image_files))
         self.slider.config(to=max(0, n - 1))
