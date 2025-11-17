@@ -154,7 +154,7 @@ Efficient for semi-automatic dataset annotation.
 Classical CV algorithms to automatically detect geometric shapes.
 
 ### Workflow:
-1. Select image index  
+1. Select image index (predefined or custom )
 2. Generate a **binary mask** using thresholding  
 3. Apply shape detection: (Tick MV preview)
    - ⚪ Circle  
