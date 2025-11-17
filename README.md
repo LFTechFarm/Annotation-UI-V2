@@ -38,16 +38,6 @@ Using the tabs on the LEFT panel, choose the desired task:
 - **Bounding Box (Detection)**  
 - **Mask (Segmentation)**  
 
-If you only have images, create an empty `labels/` folder.
-
----
-
-## 1.3 Select Your Annotation Task  
-Using the tabs on the LEFT panel, choose the desired task:
-
-- **Bounding Box (Detection)**  
-- **Mask (Segmentation)**  
-
 Your tools will update automatically based on your selection.
 
 ---
@@ -56,7 +46,7 @@ Your tools will update automatically based on your selection.
 The interface is split into two operative areas:
 
 ### 🔵 Left Panel = **Task Tools (Your Annotation Actions)**  
-Used for all manual annotation work.
+Used for navigation, class selection, and annotation.
 
 ### 🟣 Right Panel = **Helpers (Dataset Info, YOLO, Machine Vision)**  
 Used for automation, predictions, and shape detection.
@@ -67,7 +57,18 @@ This separation keeps annotation clean and efficient.
 
 # 2️⃣ Left Panel — Task Tools
 
-## 2.1 Image Navigation & Display  
+## 2.1 Class Selection (Required Before Annotating)  
+Before drawing or editing anything, you must **select the class** of the object you want to annotate.
+
+- Choose the target class using the class selector on the left  
+- All drawings (BBox or Mask) will be tagged with this class  
+- You can change the class later using **Change Class**  
+
+This step is required for both **Bounding Box** and **Mask** annotations.
+
+---
+
+## 2.2 Image Navigation & Display  
 - Move between images with the **slider** or **arrow buttons**  
 - Zoom and pan to inspect details  
 - Toggle visibility of:
@@ -78,8 +79,9 @@ This separation keeps annotation clean and efficient.
 
 ---
 
-## 2.2 Annotation Modes — Bounding Boxes  
-Active when **BBox** task is selected:
+## 2.3 Annotation Modes — Bounding Boxes  
+Active when **BBox** task is selected.  
+Class selection must be done before drawing.
 
 | Mode | Description |
 |------|-------------|
@@ -91,8 +93,9 @@ Active when **BBox** task is selected:
 
 ---
 
-## 2.3 Annotation Modes — Masks  
-Active when **Mask** task is selected:
+## 2.4 Annotation Modes — Masks  
+Active when **Mask** task is selected.  
+Class selection must be done before drawing.
 
 | Mode | Description |
 |------|-------------|
@@ -101,7 +104,7 @@ Active when **Mask** task is selected:
 | 🗑️ **Delete Mask** | Remove the mask |
 | 🔀 **Change Class** | Modify the object class |
 | ✨ **Validate** | Transfer predicted mask to GT |
-| ⚒️ **Modify shape** | Modify contour of the shape |
+| ⚒️ **Modify Shape** | Modify the contour of the mask |
 
 ---
 
@@ -123,8 +126,8 @@ Provides an overview of:
 - Date  
 
 ### **Class Legend**
-By default the names are **class_{id}**.  
-You can load a YOLO YAML file to display real class names.
+Default class names are **class_{id}**.  
+You can load a YAML file to display real class names.
 
 Useful for monitoring progress and dataset integrity.
 
@@ -158,6 +161,7 @@ Classical CV algorithms to automatically detect geometric shapes.
    - ⬛ Rectangle  
    - 🔷 Polygon  
    - 📏 Circularity filter  
+   - ...  
 
 Ideal for datasets with structured or industrial shapes.
 
@@ -194,7 +198,7 @@ Ideal for datasets with structured or industrial shapes.
 # 6️⃣ Roadmap ⏳  
 - YOLO-based **mask prediction**  
 - Advanced segmentation editing utilities  
-- Plugin system for custom CV scripts  
+- Upgrade dataset description panels
 
 ---
 
@@ -205,4 +209,4 @@ Feel free to reach out for improvements or new features.
 ---
 
 # 8️⃣ License 📄  
-Specify your license here (MIT, Apache, GPL, etc.)
+Use it, upgrade it, make it yours.
