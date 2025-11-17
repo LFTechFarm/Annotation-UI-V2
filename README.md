@@ -100,7 +100,7 @@ Class selection must be done before drawing.
 
 | Mode | Description |
 |------|-------------|
-| ✏️ **Draw Mask** | Create a new segmentation mask |
+| ✏️ **Draw Mask** | Create a new segmentation mask (right click to validate) |
 | ⚒️ **Edit Mask** | Move contour points to refine shape |
 | 🗑️ **Delete Mask** | Remove the mask |
 | 🔀 **Change Class** | Modify the object class |
